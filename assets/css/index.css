@@ -88,17 +88,25 @@ header .hero {
     text-align: center;
     flex-direction: column;
     position: relative;
-    height: 1000px;
+    height: auto;
 }
 
 header .hero h1 {
-    margin-top: -100px;
+    margin-top: 150px;
     font-size: 60px;
     color: rgb(212, 212, 212);
 }
 
 header .hero h1 span {
     color: royalblue;
+}
+
+.main {
+    display: inline-block;
+    animation-name: hello;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%; 
 }
 
 header .hero p {
@@ -114,14 +122,19 @@ header .hero p span {
 }
 
 header .hero .btn {
-    padding-top: 60px;
+    padding-top: 150px;
 }
 
 header .hero .btn .bx {
-    padding: 10px !important;
+    padding: 15px !important;
     background-color: royalblue !important;
     border-radius: 100% !important;
-    color: rgb(202, 206, 221);
+    font-weight: 300 !important;
+    color: rgb(182, 186, 199);
+}
+
+header .hero .btn .bx-fade-down {
+    animation-iteration-count: 2 !important;
 }
 
 /* CERCLES */
@@ -173,6 +186,17 @@ header .hero .cercle2 {
 }
 
 /* ANNIMATIONS */
+
+@keyframes hello {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
 
 @keyframes appariton {
     0% {
