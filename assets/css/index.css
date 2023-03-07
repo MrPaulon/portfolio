@@ -22,9 +22,6 @@ a {
 
 /* NAVBAR */
 
-header {
-}
-
 nav {
     height: 100px;
     display: inline-flex;
@@ -95,7 +92,7 @@ header .hero {
 }
 
 header .hero h1 {
-    margin-top: -250px;
+    margin-top: -100px;
     font-size: 60px;
     color: rgb(212, 212, 212);
 }
@@ -114,6 +111,17 @@ header .hero p span {
     background-color: rgba(222, 226, 255, 0.247);
     padding: 8px;
     border-radius: 10px;
+}
+
+header .hero .btn {
+    padding-top: 60px;
+}
+
+header .hero .btn .bx {
+    padding: 10px !important;
+    background-color: royalblue !important;
+    border-radius: 100% !important;
+    color: rgb(202, 206, 221);
 }
 
 /* CERCLES */
