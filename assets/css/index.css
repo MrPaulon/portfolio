@@ -88,7 +88,7 @@ header {
     overflow: hidden;
 }
 
-header .hero {
+.hero {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -97,13 +97,13 @@ header .hero {
     height: auto;
 }
 
-header .hero h1 {
+.hero h1 {
     margin-top: 150px;
     font-size: 60px;
     color: var(--text);
 }
 
-header .hero h1 span {
+.hero h1 span {
     color: royalblue;
 }
 
@@ -115,23 +115,23 @@ header .hero h1 span {
     transform-origin: 70% 70%; 
 }
 
-header .hero p {
+.hero p {
     color: var(--text-gray);
     padding-top: 50px;
     font-size: 18px;
 }
 
-header .hero p span {
+.hero p span {
     background-color: rgba(222, 226, 255, 0.247);
     padding: 8px;
     border-radius: 10px;
 }
 
-header .hero .btn {
+.hero .btn {
     padding-top: 150px;
 }
 
-header .hero .btn .bx {
+.hero .btn .bx {
     padding: 15px !important;
     background-color: royalblue !important;
     border-radius: 100% !important;
@@ -139,13 +139,13 @@ header .hero .btn .bx {
     color: rgb(182, 186, 199);
 }
 
-header .hero .btn .bx-fade-down {
+.hero .btn .bx-fade-down {
     animation-iteration-count: 2 !important;
 }
 
 /* CERCLES */
 
-header .hero .cercle1 {
+.hero .cercle1 {
     position: absolute;
     width: 400px;
     height: 400px;
@@ -159,7 +159,7 @@ header .hero .cercle1 {
 }
 
 
-header .hero .cercle2 {
+.hero .cercle2 {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -171,6 +171,8 @@ header .hero .cercle2 {
     transition: 0.3s;
     animation: 10s infinite mouvement2;
 }
+
+/* ABOUT */
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
@@ -194,6 +196,17 @@ header .hero .cercle2 {
 }
 
 /* ANNIMATIONS */
+
+@keyframes fade-up {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -200px;
+        display: none;
+    }
+}
 
 @keyframes hello {
     0% { transform: rotate( 0.0deg) }

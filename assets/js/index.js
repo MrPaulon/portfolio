@@ -18,6 +18,9 @@ function changePage(val) {
         $(".hero").css("display", "flex");
     }
     if (val == 2) {
-        $(".hero").css("display", "none");
+        $(".hero").css("animation", "0.5s fade-up");
+        setTimeout(() => {    
+            $(".hero").css("display", "none");
+        }, 385);
     }
 }
