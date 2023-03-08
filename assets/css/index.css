@@ -7,6 +7,8 @@
 
 :root{
     --background: #0d1117;
+    --text: rgb(212, 212, 212);
+    --text-gray: rgb(157, 159, 170);
 }
 
 /* BASE */
@@ -37,7 +39,7 @@ nav .title {
 }
 
 nav .title h1 {
-    color: rgb(212, 212, 212);
+    color: var(--text);
 }
 
 nav .title h1 .cursor {
@@ -54,7 +56,7 @@ nav .buttons {
 }
 
 nav .buttons .btn {
-    color: rgb(160, 160, 160);
+    color: var(--text-gray);
     font-size: 20px;
     padding-left: 20px;
     transition: 0.3s;
@@ -62,7 +64,7 @@ nav .buttons .btn {
 
 nav .buttons .btn:hover {
     transition: 0.3s;
-    color: rgb(224, 224, 224);
+    color: var(--text);
 }
 
 nav .buttons .box {
@@ -82,6 +84,10 @@ nav .buttons .box .bx-xs {
     font-weight: 400 !important;
 }
 
+header {
+    overflow: hidden;
+}
+
 header .hero {
     display: flex;
     justify-content: center;
@@ -94,7 +100,7 @@ header .hero {
 header .hero h1 {
     margin-top: 150px;
     font-size: 60px;
-    color: rgb(212, 212, 212);
+    color: var(--text);
 }
 
 header .hero h1 span {
@@ -110,7 +116,7 @@ header .hero h1 span {
 }
 
 header .hero p {
-    color: rgb(157, 159, 170);
+    color: var(--text-gray);
     padding-top: 50px;
     font-size: 18px;
 }
@@ -148,7 +154,8 @@ header .hero .cercle1 {
     filter: blur(200px);
     top: 30%;
     right: 0%;
-    animation: 10s infinite mouvement;
+    transition: 0.3s;
+    animation: 7s infinite mouvement;
 }
 
 
@@ -161,6 +168,7 @@ header .hero .cercle2 {
     filter: blur(150px);
     top: 15%;
     left: 10%;
+    transition: 0.3s;
     animation: 10s infinite mouvement2;
 }
 
