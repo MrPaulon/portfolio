@@ -89,7 +89,7 @@ header {
 }
 
 .hero {
-    display: none;
+    display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
@@ -176,20 +176,42 @@ header {
 /* ABOUT */
 
 .about {
-    display: flex;
+    display: none;
     height: auto;
     width: 100%;
+    position: relative;
+    opacity: 0;
 }
 
 .about .gauche {
     margin-top: 70px;
     width: 30%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .about .gauche h1 {
     color: var(--text);
     font-size: 70px;
+    padding-left: 100px;
+    padding-top: 130px;
+}
+
+.about .gauche h1 span {
+    color: royalblue;
+}
+
+.about .gauche a {
+    color: var(--text);
+    font-size: 20px;
+    padding: 12px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: royalblue;
 }
 
 .about .droite {
@@ -233,11 +255,11 @@ header {
 }
 
 #card2 {
-    background-image: url(../img/ia.png);
+    background-image: url(../img/ia.webp);
 }
 
 #card3 {
-    background-image: url(../img/card.png);
+    background-image: url(../img/server.png);
 }
 
 
@@ -253,17 +275,9 @@ header {
     height: 100%;
     left: 0;
     top: 0;
-
-    
     background-image: radial-gradient(circle at 50% -20%, #ffffff35, #0000000f);
     border-radius: 40px;
 }
-
-.about .droite .carousel .active {
-    height: 630px;
-    width: 475px;
-}
-
 
 /* SCROLL BAR */
 

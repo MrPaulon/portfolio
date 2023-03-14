@@ -19,19 +19,35 @@ window.onwheel = e => {
 
 function changePage(val) {
     console.log(val)
-    if (val == 1) {
-        $(".hero").css("display", "flex");
-        $(".hero").css("animation", "0.5s reverse fade-down");
+    if (val == 1) {        
+        $(".about").css("animation", "0.5s fade-up");
+        $(".about").css("opacity", "0");
+
         setTimeout(() => {    
-            $(".hero").css("opacity", "1");
+            $(".about").css("display", "none");
+            $(".about").css("opacity", "0");
+
+            $(".hero").css("display", "flex");
+            $(".hero").css("animation", "0.5s reverse fade-down");
+            setTimeout(() => {
+                $(".hero").css("opacity", "1");
+            }, 385);
+
         }, 385);
     }
     if (val == 2) {
         $(".hero").css("animation", "0.5s fade-up");
+        $(".hero").css("opacity", "0");
         setTimeout(() => {    
             $(".hero").css("display", "none");
             $(".hero").css("opacity", "0");
+
             $(".about").css("display", "flex");
+            $(".about").css("animation", "0.5s reverse fade-down");
+            setTimeout(() => {
+                $(".about").css("opacity", "1");
+            }, 385);
+
         }, 385);
     }
 }
