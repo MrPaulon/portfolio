@@ -215,11 +215,6 @@ header {
     margin: 25px;
     margin-right: 5px;
 
-    background-image: url(../img/card.png);
-    
-
-
-
     box-shadow: 0 1px 5px #50536599;
 
     background-size: cover;
@@ -232,6 +227,19 @@ header {
 
     transform: rotate3d(0);
 }
+
+#card1 {
+    background-image: url(../img/card.png);
+}
+
+#card2 {
+    background-image: url(../img/ia.png);
+}
+
+#card3 {
+    background-image: url(../img/card.png);
+}
+
 
 .about .droite .carousel .card:hover {
   transition-duration: 150ms;

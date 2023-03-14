@@ -1,8 +1,8 @@
 var $card = document.querySelector('#card1');
 
 const $card1 = document.querySelector('#card1');
-const $card1 = document.querySelector('#card2');
-const $card1 = document.querySelector('#card3');
+const $card2 = document.querySelector('#card2');
+const $card3 = document.querySelector('#card3');
 
 
 let bounds;
@@ -45,7 +45,29 @@ $card1.addEventListener('mouseenter', () => {
     document.addEventListener('mousemove', rotateToMouse);
 });
 
+$card2.addEventListener('mouseenter', () => {
+  $card = document.querySelector('#card2');
+  bounds = $card.getBoundingClientRect();
+  document.addEventListener('mousemove', rotateToMouse);
+});
+
+$card3.addEventListener('mouseenter', () => {
+  $card = document.querySelector('#card3');
+  bounds = $card.getBoundingClientRect();
+  document.addEventListener('mousemove', rotateToMouse);
+});
+
 $card1.addEventListener('mouseleave', () => {
+    document.removeEventListener('mousemove', rotateToMouse);
+    $card.style.transform = '';
+    $card.style.background = '';
+});
+$card2.addEventListener('mouseleave', () => {
+    document.removeEventListener('mousemove', rotateToMouse);
+    $card.style.transform = '';
+    $card.style.background = '';
+});
+$card3.addEventListener('mouseleave', () => {
     document.removeEventListener('mousemove', rotateToMouse);
     $card.style.transform = '';
     $card.style.background = '';
