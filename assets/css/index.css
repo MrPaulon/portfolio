@@ -89,7 +89,7 @@ header {
 }
 
 .hero {
-    display: flex;
+    display: none;
     justify-content: center;
     text-align: center;
     flex-direction: column;
@@ -176,13 +176,89 @@ header {
 /* ABOUT */
 
 .about {
-    background-color: red;
-    display: none;
-    height: 100vh;
+    display: flex;
+    height: auto;
     width: 100%;
 }
 
+.about .gauche {
+    margin-top: 70px;
+    width: 30%;
+    height: 100%;
+}
+
+.about .gauche h1 {
+    color: var(--text);
+    font-size: 70px;
+}
+
+.about .droite {
+    margin-top: 70px;
+    width: 70%;
+    height: 100%;
+    display: block;
+    overflow: scroll;
+}
+
+.about .droite .carousel {
+    width: auto;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.about .droite .carousel .card {
+    display: block;
+    height: 600px;
+    width: 450px;
+    border-radius: 40px;
+    margin: 25px;
+    margin-right: 5px;
+
+    background-image: url(../img/card.png);
+    
+
+
+
+    box-shadow: 0 1px 5px #50536599;
+
+    background-size: cover;
+
+    position: relative;
+    
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+
+    transform: rotate3d(0);
+}
+
+.about .droite .carousel .card:hover {
+  transition-duration: 150ms;
+  box-shadow: 10px 5px 30px #27293299;
+  cursor: pointer;
+}
+
+.about .droite .carousel .card .glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    
+    background-image: radial-gradient(circle at 50% -20%, #ffffff35, #0000000f);
+    border-radius: 40px;
+}
+
+.about .droite .carousel .active {
+    height: 630px;
+    width: 475px;
+}
+
+
 /* SCROLL BAR */
+
 ::-webkit-scrollbar {
     width: 10px;
 }

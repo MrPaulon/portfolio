@@ -1,14 +1,19 @@
 var pageActive = 1;
+var canScroll = true
 
 window.onwheel = e => {
-    if(e.deltaY >= 100 && e.deltaY <= 150){
-      pageActive++;
-      changePage(pageActive);
-      console.log('Scroll Down');
-    } else if(e.deltaY <= -100 && e.deltaY >= -150 ) {
-      pageActive--;
-      changePage(pageActive);
-      console.log('Scroll Up');
+    if(e.deltaY >= 75 && canScroll == true){
+        canScroll = false
+        waitForScroll()
+        pageActive++;
+        changePage(pageActive);
+        console.log('Scroll Down');
+    } else if(e.deltaY <= -75 && canScroll == true ) {
+        canScroll = false
+        waitForScroll()
+        pageActive--;
+        changePage(pageActive);
+        console.log('Scroll Up');
     }
   }
 
@@ -26,7 +31,13 @@ function changePage(val) {
         setTimeout(() => {    
             $(".hero").css("display", "none");
             $(".hero").css("opacity", "0");
-            $(".about").css("display", "block");
+            $(".about").css("display", "flex");
         }, 385);
     }
+}
+
+function waitForScroll() {
+    setTimeout(() => {
+        canScroll = true
+    }, 800)
 }
