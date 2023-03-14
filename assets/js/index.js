@@ -46,6 +46,18 @@ function changePage(val) {
             $(".about").css("animation", "0.5s reverse fade-down");
             setTimeout(() => {
                 $(".about").css("opacity", "1");
+
+                setTimeout(() => {
+                    $(".mainTitle").css("animation", "3s ease titleAnimationApparition");
+
+                    $(".mainTitle").css("transform", "translateY(0)");
+                    $(".mainTitle").css("opacity", "1");
+                    $(".mainTitle").css("-webkit-clip-path", "polygon(100% 0, 100% 100%, 0 100%, 0 15%)");
+                    $(".mainTitle").css("clip-path", "polygon(100% 0, 100% 100%, 0 100%, 0 15%)");
+
+                    
+                }, 7000);
+
             }, 385);
 
         }, 385);
