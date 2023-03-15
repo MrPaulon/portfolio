@@ -22,6 +22,7 @@ function changePage(val) {
     if (val == 1) {        
         $(".about").css("animation", "0.5s fade-up");
         $(".about").css("opacity", "0");
+        $(".urlNav").remove()
 
         setTimeout(() => {    
             $(".about").css("display", "none");
@@ -44,6 +45,9 @@ function changePage(val) {
 
             $(".about").css("display", "flex");
             $(".about").css("animation", "0.5s reverse fade-down");
+
+            $(".urlNav").append("projets")
+
             setTimeout(() => {
                 $(".about").css("opacity", "1");
 

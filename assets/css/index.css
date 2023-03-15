@@ -287,10 +287,19 @@ header {
 }
 
 .about .droite .carousel {
+    z-index: 1;
     width: auto;
     height: 100%;
     display: inline-flex;
     align-items: center;
+}
+
+.about .droite  .carousel .shadow {
+    position: absolute;
+    z-index: 2;
+    height: 620px;
+    width: 350px;
+    background: linear-gradient( 90deg ,var(--background), #0d111700);
 }
 
 .about .droite .carousel .card {
@@ -315,6 +324,7 @@ header {
 }
 
 #card1 {
+    margin-left: 140px;
     background-image: url(../img/card.png);
 }
 
@@ -324,6 +334,7 @@ header {
 
 #card3 {
     background-image: url(../img/server.png);
+    margin-right: 100px;
 }
 
 
